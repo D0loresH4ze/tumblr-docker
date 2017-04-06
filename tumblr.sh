@@ -10,8 +10,7 @@ setup()
 
 post()
 {
-    #docker run --rm --label=tumblr -v $(pwd)/.tumblr:/root/.tumblr -v $(pwd):/usr/src/app/ -it mine:tumblr tumblr post $
-    echo $fname
+    docker run --rm --label=tumblr -v $(pwd)/.tumblr:/root/.tumblr -v $(pwd):/usr/src/app/ -it mine:tumblr tumblr post $fname
 }
 
 case "$1" in
